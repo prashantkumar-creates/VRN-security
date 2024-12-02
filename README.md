@@ -1,7 +1,76 @@
 # VRN-security
 
 This is a web application developed using the MERN stack to demonstrate **Role-Based Access Control (RBAC)**. It is designed for a security service company with three user roles: **Guard**, **Manager**, and **Authority**. Each role has different access permissions to the available services.
+## API Documentation
 
+Endpoint: ``` POST /signup  ```
+Input:
+     ```req.body ```
+
+```
+{
+  "employee_id": "string",
+  "password": "string",
+  "name": "string",
+  "phone": "string",
+  "role": "string"
+}
+```
+Output:
+On success:
+```
+{
+  "role": "guard",
+  "employee_id": "string",
+  "token": "string"
+}
+
+```
+
+Endpoint:  ``` POST /signin  ```
+```
+{
+  "employee_id": "string",
+  "password": "string"
+}
+
+```
+Output:
+On success:
+
+```
+{
+  "role": "string",
+  "employee_id": "string",
+  "token": "string"
+}
+
+
+```
+
+Endpoint: ``` GET /service/cctv  ```
+output:
+```
+{
+  "message": "✅OK as a gurad you are authorized to access CCTV."
+}
+
+```
+Endpoint: ``` GET /service/gdeployed  ```
+output:
+```
+  {
+  "message": " as a gurad you can not see all deployments."
+}
+```
+
+Endpoint:   ``` GET /service/attendence ```
+output:
+```
+{
+  "message": "✅OK as a gurad you can check attendance."
+}
+```
 
 
 ## Features
@@ -21,7 +90,7 @@ This is a web application developed using the MERN stack to demonstrate **Role-B
 - **Authentication**: JWT (JSON Web Tokens)
 - **Password Hashing**: bcrypt.js
 
-## Setup & Installation
+
 
 ### Clone the repository and install required dependencies in client & server.
 
