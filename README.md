@@ -13,7 +13,7 @@ Input:
   "password": "string",
   "name": "string",
   "phone": "string",
-  "role": "string"
+  "role": "guard"
 }
 ```
 Output:
@@ -40,14 +40,14 @@ On success:
 
 ```
 {
-  "role": "string",
+  "role": "gurad",
   "employee_id": "string",
   "token": "string"
 }
 
 
 ```
-
+## now signed in as Gurad Role , HE can see CCTV , ATTENDENCE but not GDEPLOYED
 Endpoint: ``` GET /service/cctv  ```
 output:
 ```
